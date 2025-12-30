@@ -1,0 +1,5 @@
+﻿frappe-bench/node_modules/
+frappe-bench/logs/
+frappe-bench/*.log
+frappe-bench/sites/*/logs/
+frappe-bench/sites/*/private/backups/
