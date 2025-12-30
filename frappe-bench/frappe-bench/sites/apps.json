@@ -1,0 +1,12 @@
+{
+    "hrms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "b51141e9ceac03543b54c4460befe05d21b5da05",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 1,
+        "version": "16.0.0-dev"
+    }
+}

@@ -1,0 +1,39 @@
+2025-12-30 10:23:19,917 DEBUG cd frappe-bench && python3 -m venv env
+2025-12-30 10:23:25,770 DEBUG cd frappe-bench && /home/frappe/frappe-bench/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2025-12-30 10:47:34,360 INFO /home/frappe/.local/bin/bench set-mariadb-host mariadb
+2025-12-30 10:47:34,598 INFO A newer version of bench is available: 5.27.0 → 5.28.0
+2025-12-30 10:47:34,941 INFO /home/frappe/.local/bin/bench set-redis-cache-host redis://redis:6379
+2025-12-30 10:47:35,140 INFO A newer version of bench is available: 5.27.0 → 5.28.0
+2025-12-30 10:47:35,345 INFO /home/frappe/.local/bin/bench set-redis-queue-host redis://redis:6379
+2025-12-30 10:47:35,592 INFO A newer version of bench is available: 5.27.0 → 5.28.0
+2025-12-30 10:47:35,874 INFO /home/frappe/.local/bin/bench set-redis-socketio-host redis://redis:6379
+2025-12-30 10:47:36,063 INFO A newer version of bench is available: 5.27.0 → 5.28.0
+2025-12-30 10:47:36,305 INFO /home/frappe/.local/bin/bench get-app erpnext
+2025-12-30 10:47:36,935 LOG Getting erpnext
+2025-12-30 10:47:36,935 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git   --origin upstream
+2025-12-30 10:51:58,702 LOG Installing erpnext
+2025-12-30 10:51:58,703 DEBUG cd /home/frappe/frappe-bench/frappe-bench && /home/frappe/frappe-bench/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/frappe-bench/apps/erpnext 
+2025-12-30 10:52:36,837 DEBUG cd /home/frappe/frappe-bench/frappe-bench/apps/erpnext && yarn install --check-files
+2025-12-30 10:52:37,596 DEBUG bench build --app erpnext
+2025-12-30 10:52:37,859 INFO /home/frappe/.local/bin/bench build --app erpnext
+2025-12-30 10:52:37,901 WARNING bench build --app erpnext executed with exit code 1
+2025-12-30 10:52:37,901 WARNING /home/frappe/.local/bin/bench get-app erpnext executed with exit code 1
+2025-12-30 10:52:38,071 INFO A newer version of bench is available: 5.27.0 → 5.28.0
+2025-12-30 10:52:38,327 INFO /home/frappe/.local/bin/bench get-app hrms
+2025-12-30 10:52:38,912 LOG Getting hrms
+2025-12-30 10:52:38,912 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git   --origin upstream
+2025-12-30 10:52:52,236 LOG Installing hrms
+2025-12-30 10:52:52,237 DEBUG cd /home/frappe/frappe-bench/frappe-bench && /home/frappe/frappe-bench/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/frappe-bench/apps/hrms 
+2025-12-30 10:52:55,662 DEBUG cd /home/frappe/frappe-bench/frappe-bench/apps/hrms && yarn install --check-files
+2025-12-30 10:53:37,218 DEBUG bench build --app hrms
+2025-12-30 10:53:37,376 INFO /home/frappe/.local/bin/bench build --app hrms
+2025-12-30 10:53:37,404 WARNING bench build --app hrms executed with exit code 1
+2025-12-30 10:53:37,404 WARNING /home/frappe/.local/bin/bench get-app hrms executed with exit code 1
+2025-12-30 10:53:37,641 INFO A newer version of bench is available: 5.27.0 → 5.28.0
+2025-12-30 10:53:38,012 INFO /home/frappe/.local/bin/bench new-site hrms.localhost --force --mariadb-root-password 123 --admin-password admin --no-mariadb-socket
+2025-12-30 10:53:38,262 INFO /home/frappe/.local/bin/bench --site hrms.localhost install-app hrms
+2025-12-30 10:53:38,463 INFO /home/frappe/.local/bin/bench --site hrms.localhost set-config developer_mode 1
+2025-12-30 10:53:38,661 INFO /home/frappe/.local/bin/bench --site hrms.localhost enable-scheduler
+2025-12-30 10:53:38,961 INFO /home/frappe/.local/bin/bench --site hrms.localhost clear-cache
+2025-12-30 10:53:39,233 INFO /home/frappe/.local/bin/bench use hrms.localhost
+2025-12-30 10:53:39,512 INFO /home/frappe/.local/bin/bench start
